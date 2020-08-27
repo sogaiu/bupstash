@@ -32,7 +32,7 @@ $ bupstash get id=$id > out.txt
 $ bupstash get id=ab834*
 
 # When a query only returns a single item, we can use that.
-$ bupstash get name=backups.tar and date=2019/*
+$ bupstash get name=backups.tar and timestamp=2019/*
 ```
 
 ## Query caching
@@ -43,7 +43,7 @@ more information on the query cache.
 ## OPTIONS
 
 * -r, --repository REPO:
-  The repository to connect to, , may be of the form `ssh://$SERVER/$PATH` for
+  The repository to connect to. May be of the form `ssh://$SERVER/$PATH` for
   remote repositories if ssh access is configured. If not specified, is set to `BUPSTASH_REPOSITORY`.
 
 * -k, --key KEY:
@@ -95,7 +95,7 @@ $ bupstash get name=backup.tar and timestamp=2020/19/* > ./restore.tar
 
 ### Get a tarball
 
-The builtin directory put creates a tarball from a directory, so to extract 
+The built in directory put creates a tarball from a directory, so to extract
 it we use tar.
 
 ```
